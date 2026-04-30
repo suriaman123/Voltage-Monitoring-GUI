@@ -1,4 +1,5 @@
-# assignment 8 by Aman and Vikas
+# voltage monitoring GUI by Aman
+
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtCore import QThread, pyqtSignal
@@ -6,7 +7,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvas
 from matplotlib.figure import Figure
 import time
 
-from assignment8_gui import assignment8_ui
+from voltagemonitor_gui import vm_ui
 
 import pyvisa
 
@@ -32,13 +33,13 @@ class data_acquisition_thread(QThread):
             self.new_value.emit([x,y])
             time.sleep(1)
 
-class assignment8(QMainWindow):    
+class voltage_monitor(QMainWindow):    
                  
     
     def __init__(self):         
 
         super().__init__()       
-        self.ui = assignment8_ui()                          
+        self.ui = vm_ui()                          
         self.ui.setupUi(self)   
 
         self.canvas = FigureCanvas(Figure())
