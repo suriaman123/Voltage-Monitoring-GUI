@@ -3,7 +3,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class assignment8_ui(object):
+class vm_ui(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(582, 399)
