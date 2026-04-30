@@ -85,6 +85,6 @@ class voltage_monitor(QMainWindow):
         print("Stopped.")
 
 app = QApplication([])
-window = assignment8()
+window = voltage_monitor()
 window.show()
 app.exec_()
